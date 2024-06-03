@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@react-monorepo/dragger": ["libs/dragger/src/index.ts"],
+      "@react-monorepo/issues": ["libs/issues/src/index.ts"],
+      "@react-monorepo/shared-models": ["libs/shared/models/src/index.ts"],
+      "@react-monorepo/shared-ui": ["libs/shared/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

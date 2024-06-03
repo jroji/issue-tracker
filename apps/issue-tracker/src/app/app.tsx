@@ -1,13 +1,24 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
-
-import NxWelcome from './nx-welcome';
+import { useContext, useEffect, useMemo } from 'react';
+import { IssuesContext } from './context/issuesContext/issuesContext';
+import { Board } from './features/board/board';
+import { Issue, Status } from './models/issue';
 
 export function App() {
+  const issuesContext = useContext(IssuesContext);
+  const { fetchIssues } = issuesContext;
+
+  const issues = useMemo(() => Object.values(Status).reduce((list, key) => {
+    list[key] = issuesContext[key] as Issue[] ?? [];
+    return list;
+  }, {} as Record<Status, Issue[]>), [issuesContext]);
+
+  useEffect(() => {
+    async function fetchData() { fetchIssues(); }
+    fetchData();
+  }, []);
+
   return (
-    <div>
-      <NxWelcome title="issue-tracker" />
-    </div>
+    <Board issues={issues}></Board>
   );
 }
 

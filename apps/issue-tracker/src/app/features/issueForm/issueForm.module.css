@@ -1,0 +1,31 @@
+.issue-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: first baseline;
+    width: 100%;
+    gap: var(--spacing, 3rem);
+    margin-bottom: var(--spacing, 3rem);
+}
+
+.issue-form_input {
+    flex: 1;
+    background: none;
+    border: none;
+    border-bottom: var(--issue-form-input-border-bottom, 1px solid gray);
+    padding: var(--issue-form-input-padding, 1rem);
+    font-size: 16px;
+}
+
+.issue-form_button {
+    background-color: aquamarine;
+    border: none;
+    cursor: pointer;
+    padding: var(--issue-form-button-padding, 1rem 2rem);
+    box-shadow: 0px 1px 2px 0px gray;
+    flex: 1;
+    max-width: 420px;
+}
+
+.issue-form_button:hover {
+    opacity: .8;
+}

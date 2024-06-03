@@ -1,0 +1,15 @@
+.issue-track_list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--list-spacing, .75rem);
+    flex: 1;
+
+    &:hover .issue-track_status{
+        border-bottom: 1px solid rgb(0, 0, 0);
+    }
+}
+
+.issue-track_status {
+    border-bottom: 1px solid rgb(203, 203, 203);
+    font-weight: 100;
+}

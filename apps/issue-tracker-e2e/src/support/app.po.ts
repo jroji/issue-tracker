@@ -1,1 +1,2 @@
-export const getGreeting = () => cy.get('h1');
+export const getInput = () => cy.get('input');
+export const getButton = () => cy.get('button');

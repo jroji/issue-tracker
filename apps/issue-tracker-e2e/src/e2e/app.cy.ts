@@ -1,13 +1,14 @@
-import { getGreeting } from '../support/app.po';
+import { getInput, getButton } from '../support/app.po';
 
 describe('issue-tracker-e2e', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+  it('should create a new task', () => {
+    const message = 'Welcome to issue-tracker!'
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains(/Welcome/);
+    getInput().type(message);
+    getButton().click();
+    
+    cy.get('h3').should('contain', message);
   });
 });

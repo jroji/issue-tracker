@@ -1,0 +1,36 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+.avatar {
+    position: relative;
+    overflow: visible;
+}
+
+.avatar_image {
+    border-radius: var(--avatar-border-radius, 100%);
+    width: var(--avatar-size, 40px);
+    height: var(--avatar-size, 40px);
+    object-fit: cover;
+}
+
+.avatar_tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--avatar-tooltip-bg, #000);
+    color: var(--avatar-tooltip-color, #fff);
+    padding: var(--avatar-tooltip-spacing, 0.5rem);
+    border-radius: 0.5rem;
+    font-size: var(--avatar-tooltip-font-size, 0.75rem);
+    display: none;
+    width: max-content;
+}
+
+.avatar:hover .avatar_tooltip {
+    display: block;
+}

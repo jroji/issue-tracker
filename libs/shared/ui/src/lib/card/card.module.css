@@ -1,0 +1,28 @@
+.card {
+    background-color: var(--card-bg, white);
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-spacing, 8px);
+    border:  var(--card-border, 1px solid gray);
+    border-radius: var(--card-border-radius, 8px);
+    padding: var(--card-spacing, 8px);
+}
+
+.card_section {
+    display: flex;
+}
+
+
+.card_title {
+    border-bottom: 1px solid gray;
+    padding: 0 0 var(--card-spacing, 8px);
+    font-size: 16px;
+}
+
+.card_body {
+    font-size: 12px;
+}
+
+.card_selected {
+    background-color: rgb(251, 255, 228);
+}

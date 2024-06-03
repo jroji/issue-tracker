@@ -1,0 +1,36 @@
+.board_main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 1280px;
+    padding: var(--spacing, 3rem);
+    margin: 0 auto;
+    background-color: rgb(236, 236, 236);
+    box-shadow: 0 0 10px gray;
+    height: 100vh;
+}
+
+.board_bin {
+    transition: font-size 0.3s;
+    font-size: 40px;
+    align-self: end;
+}
+
+.board_bin:hover {
+    font-size: 50px;
+}
+
+.board_issue-tracks {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    overflow: auto;
+    flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .board_issue-tracks {
+        flex-direction: column;
+    }
+}

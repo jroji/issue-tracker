@@ -1,0 +1,11 @@
+.drag-element {
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.dragging {
+    pointer-events: none;
+}

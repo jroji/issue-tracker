@@ -1,0 +1,68 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+
+.issue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.issue-header_title {
+    max-width: 145px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.issue-status {
+    padding: var(--issue-spacing, 0.2rem 0.4rem);
+    display: flex;
+    align-items: center;
+    width: max-content;
+    border-radius: var(--issue-status-border-radius, 10px);
+    font-size: var(--issue-status-font-size, 12px);
+    border: 2px solid gray;
+    font-weight: bold;
+}
+
+.issue-status:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.issue-status--ongoing {
+    border-color: var(--issue-ongoing-color, rgb(227, 207, 57));
+    color:var(--issue-ongoing-color, rgb(227, 207, 57));
+}
+
+.issue-status--blocked {
+    border-color: var(--issue-completed-color, red);
+    color:var(--issue-completed-color, red);
+}
+
+.issue-status--open {
+    border-color: var(--issue-pending-color, rgb(55, 99, 231));
+    color:var(--issue-pending-color, rgb(55, 99, 231));
+}
+
+.issue-status--done {
+    border-color: var(--issue-blocked-color, rgb(11, 119, 36));
+    color:var(--issue-blocked-color, rgb(11, 119, 36));
+}
+
+.issue-status_text {
+    mix-blend-mode: difference;
+}
+
+.issue-body {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
