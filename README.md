@@ -3,12 +3,12 @@
 
 ## Architectural decision
 
-- All columns depends on the Status enum. You can add new columns just by adding new options there.
+- Used nx as monorepository to create reusable libs and keep the projects separated
+- All columns and application depends only on the Status enum. You can add new columns just by adding new options there.
 - Shared elements (Card) are reusable and composable in order to increase resuability
 - Reusable components and elements use custom properties in order to be easily customized
 - Used MSWJS for mocks, using service workers in order to attack a fictional domain (example.com)
 - Created my own drag library 
-
 
 ## Start the application
 
